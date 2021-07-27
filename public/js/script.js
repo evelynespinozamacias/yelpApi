@@ -82,6 +82,7 @@ $(function() {
 	function buildBusinesses(data) {
 		// build ui with business data
 		
+		$(".card").remove();
 		for (var i = 0; i < data.businesses.length; i++) {
 			//console.log(data.businesses[i].name);
 			
@@ -101,8 +102,6 @@ $(function() {
 		}
 		
 	}
-	
-	
 	
 
 });

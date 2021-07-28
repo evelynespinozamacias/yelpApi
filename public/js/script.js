@@ -94,8 +94,21 @@ $(function() {
 			$business.find(".business-title").append($bus.name);
 			$business.find(".business-rating").append($bus.rating);
 			$business.find(".review-count").append($bus.review_count);
-			//$business.find(".business-address").append($bus.location.display_address);
-			//add phone number
+			
+			//4
+			var numStars = Math.floor($bus.rating);
+			for (var ri = 1; ri <= numStars; ri++) {
+				$business.find("img:nth-child(" + ri + ")").attr(
+					"src", "images/star-filled.png");
+			}
+			//4.5
+			var numStarsString = "" + $bus.rating;
+			if(numStarsString.endsWith(".5")) {
+				$business.find("img:nth-child(" + (numStars + 1) + ")").attr(
+				"src", "images/star-half.png");
+			}
+			
+			$business.find(".business-image img").attr("src", $bus.image_url);
 			$("#businesses").append($business);
 			
 			

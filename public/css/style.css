@@ -33,7 +33,9 @@ body {
 	width: 30%; 
 }
 
-
+.business-rating > img {
+	height: 1.25em; 
+}
 
 
 
